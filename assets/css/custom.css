@@ -3084,7 +3084,7 @@ textarea.form-control.is-invalid {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border:var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
   border-radius: var(--bs-btn-border-radius);
   background-color: var(--bs-btn-bg);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
@@ -3262,6 +3262,23 @@ fieldset:disabled .btn {
   --bs-btn-disabled-border-color: #f8f9fa;
 }
 
+.btn-white {
+  --bs-btn-color: #4a4b4e;
+  --bs-btn-bg: #ffffff;
+  --bs-btn-border-color: #ffffff;
+  --bs-btn-hover-color: #4a4b4e;
+  --bs-btn-hover-bg: #f8f9fa;
+  --bs-btn-hover-border-color: #d3d4d5;
+  --bs-btn-focus-shadow-rgb: 211, 212, 213;
+  --bs-btn-active-color: #4a4b4e;
+  --bs-btn-active-bg: #d3d4d5;
+  --bs-btn-active-border-color: #babbbc;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: #000000;
+  --bs-btn-disabled-bg: #ffffff;
+  --bs-btn-disabled-border-color: #ffffff;
+}
+
 .btn-dark {
   --bs-btn-color: #ffffff;
   --bs-btn-bg: #212529;
@@ -3414,7 +3431,21 @@ fieldset:disabled .btn {
   --bs-btn-disabled-border-color: #212529;
   --bs-gradient: none;
 }
-
+.btn-soft-primary {
+  --bs-btn-color: #5ae9b5;
+  --bs-btn-bg: #eefdf7;
+  --bs-btn-hover-color: #5ae9b5;
+  --bs-btn-hover-bg: #dbfaed;
+  --bs-btn-active-color: #5ae9b5;
+  --bs-btn-active-bg: #dbfaed;
+  --bs-btn-active-border-color: #5ae9b5;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: #5ae9b5;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #5ae9b5;
+  --bs-gradient: none;
+  --bs-btn-border-radius: 1.36rem;
+}
 .btn-link {
   --bs-btn-font-weight: 400;
   --bs-btn-color: var(--bs-link-color);
@@ -3439,9 +3470,9 @@ fieldset:disabled .btn {
 
 .btn-lg,
 .btn-group-lg > .btn {
-  --bs-btn-padding-y: 0.5rem;
-  --bs-btn-padding-x: 1rem;
-  --bs-btn-font-size: 1.25rem;
+  --bs-btn-padding-y: 0.75rem;
+  --bs-btn-padding-x: 1.75rem;
+  --bs-btn-font-size: 1.6rem;
   --bs-btn-border-radius: 0.5rem;
 }
 

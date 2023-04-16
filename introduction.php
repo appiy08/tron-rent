@@ -20,8 +20,8 @@
   </head>
   <body>
     <div id="root" class="layout-container page-introduction">
-      <header>
-        <nav class="navbar navbar-expand-lg layout-navbar bg-primary">
+      <header class="layout-navbar">
+        <nav class="navbar navbar-expand-lg bg-primary">
           <div
             class="container-fluid align-items-center justify-content-start px-0"
           >

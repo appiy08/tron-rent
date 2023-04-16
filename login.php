@@ -20,8 +20,8 @@
   </head>
   <body>
     <div id="root" class="layout-container page-login">
-      <header>
-        <nav class="navbar navbar-expand-lg layout-navbar">
+      <header class="layout-navbar">
+        <nav class="navbar navbar-expand-lg">
           <div class="container-fluid gap-3 justify-content-between px-0">
             <div class="navbar-left">
               <button

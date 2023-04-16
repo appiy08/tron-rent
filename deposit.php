@@ -20,8 +20,8 @@
   </head>
   <body>
     <div id="root" class="layout-container page-deposit">
-      <header>
-        <nav class="navbar navbar-expand-lg layout-navbar">
+      <header class="layout-navbar">
+        <nav class="navbar navbar-expand-lg">
           <div
             class="container-fluid align-items-center justify-content-start px-0"
           >
