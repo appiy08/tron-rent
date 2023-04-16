@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tron Rent</title>
+    <title>Tron Supply</title>
 
     <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/swiper/swiper-bundle.min.css" />
@@ -26,7 +26,7 @@
             class="container-fluid align-items-center justify-content-start px-0"
           >
             <div class="col-4 navbar-left">
-              <a class="navbar-back mute-color">
+              <a href="index.php" class="navbar-back mute-color">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"

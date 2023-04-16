@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tron Rent</title>
+    <title>Tron Supply</title>
 
     <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/swiper/swiper-bundle.min.css" />
@@ -28,7 +28,7 @@
                     <div class="row align-items-center w-100">
                         <div class="col-4 navbar-left">
                             <a class="navbar-brand" href="#">
-                                <img src="./assets/images/logo/tron-rent.png" alt="Brand Logo" class="img-fluid" />
+                                <img src="./assets/images/logo/tron-supply-logo.svg" alt="Brand Logo" class="img-fluid" />
                             </a>
                         </div>
                         <div class="col-8 navbar-right">
@@ -145,20 +145,34 @@
         </main>
         <footer class="layout-footer">
             <div class="tabbar-wrap">
-                <a class="tab-item active">
-                    <div class="icon-bar"><i class="icon icon-home"></i></div>
+                <a href="index.php" class="tab-item active">
+                    <div class="icon-bar">
+                        <i class="icon icon-home"></i>
+                    </div>
                     <p>Home</p>
-                </a><a class="tab-item">
-                    <div class="icon-bar"><i class="icon icon-mining"></i></div>
+                </a>
+                <a href="income.php" class="tab-item">
+                    <div class="icon-bar">
+                        <i class="icon icon-mining"></i>
+                    </div>
                     <p>Income</p>
-                </a><a class="tab-item ismid">
-                    <div class="icon-bar"><i class="icon icon-invest"></i></div>
+                </a>
+                <a href="invest.php" class="tab-item ismid">
+                    <div class="icon-bar">
+                        <i class="icon icon-invest"></i>
+                    </div>
                     <p>Invest</p>
-                </a><a class="tab-item">
-                    <div class="icon-bar"><i class="icon icon-share"></i></div>
+                </a>
+                <a href="share.php" class="tab-item">
+                    <div class="icon-bar">
+                        <i class="icon icon-share"></i>
+                    </div>
                     <p>Share Friends</p>
-                </a><a class="tab-item">
-                    <div class="icon-bar"><i class="icon icon-me"></i></div>
+                </a>
+                <a href="mine.php" class="tab-item">
+                    <div class="icon-bar">
+                        <i class="icon icon-me"></i>
+                    </div>
                     <p>Mine</p>
                 </a>
             </div>
