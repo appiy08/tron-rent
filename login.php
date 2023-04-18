@@ -1,3 +1,30 @@
+<?php
+    require('connection.php');
+    session_start();
+    // When form submitted, check and create user session.
+    if (isset($_POST['name'])) {
+        $name = stripslashes($_REQUEST['name']);    // removes backslashes
+        $username = mysqli_real_escape_string($conn, $name);
+        $password = stripslashes($_REQUEST['password']);
+        $password = mysqli_real_escape_string($conn, $password);
+        // Check user is exist in the database
+        $query    = "SELECT * FROM `users` WHERE name='$username'
+                     AND password='" . md5($password) . "'";
+        $result = mysqli_query($conn, $query);
+        $rows = mysqli_num_rows($result);
+        if ($rows == 1) {
+			$_SESSION['logged_in'] = $logged_in;
+            $_SESSION['name'] = $username;
+            // Redirect to user dashboard page
+            header("Location: index.php");
+        } else {
+            echo "<div class='form'>
+                  <h3>Incorrect Username/password.</h3><br/>
+                  <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
+                  </div>";
+        }
+    } else {
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -126,11 +153,12 @@
           </a>
           <h2 class="page-title">Hello</h2>
           <h3 class="page-title">Welcome to Tron Rent</h3>
-          <form class="form-wrapper">
+          <form class="form-wrapper" method="post" name="login" autocomplete="off">
             <div class="mb-4">
               <label for="InputUsername" class="form-label">Username</label>
               <input
-                type="email"
+                type="text"
+                name="name"
                 class="form-control"
                 id="InputUsername"
                 aria-describedby="emailHelp"
@@ -138,7 +166,7 @@
             </div>
             <div class="mb-4">
               <label for="InputPassword" class="form-label">Password</label>
-              <input type="password" class="form-control" id="InputPassword" />
+              <input type="password" name="password" class="form-control" id="InputPassword" />
             </div>
             <div class="mb-4">
               <label class="form-label" for="InputVCode">VCode</label>
@@ -148,17 +176,21 @@
               </div>
             </div>
             <div class="vstack gap-3 form-button-group">
-              <button type="submit" class="btn btn-light form-btn">
+              <!-- <button type="submit" class="btn btn-light form-btn">
                 Login
-              </button>
-              <button type="button" class="btn btn-outline-primary form-btn">
+              </button> -->
+              <input type="submit" name="submit" class="btn btn-light form-btn" value="Login">
+              <a href="register.php" type="button" class="btn btn-outline-primary form-btn">
                 Register
-              </button>
-              <button type="button" class="btn btn-outline-primary border-0 fs-13">
+              </a>
+              <a href="index.php" type="button" class="btn btn-outline-primary border-0 fs-13">
                 Go to homepage
-              </button>
+              </a>
             </div>
           </form>
+          <?php
+            }
+          ?>
         </div>
       </main>
     </div>

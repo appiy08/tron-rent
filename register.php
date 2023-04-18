@@ -1,3 +1,111 @@
+<?php
+require 'connection.php';
+session_start();
+// define variables and set to empty values
+$nameErr = $emailErr = $mobileErr = $passwordErr = $recomnded_codeErr = "";
+$name = $email = $mobile = $password = $recomnded_code = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
+    }
+  }
+  
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+    }
+  }
+
+  if (empty($_POST["mobile"])) {
+    $mobileErr = "mobile is required";
+  } else {
+    $mobile = test_input($_POST["mobile"]);
+    if (!strlen($mobile) == 10) {
+        $mobileErr = "InValid mobile number enter 10 digit";
+    } 
+  }
+
+//   if (empty($_POST["recomnded_code"])) {
+//     $recomnded_codeErr = "Recomonded code is required";
+//   } else {
+//     $recomnded_code = test_input($_POST["recomnded_code"]);
+//   }
+
+	
+	if (isset($_POST['submit'])) {
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$mobile = $_POST['mobile'];
+		$password = md5($_POST['password']);
+		$referral_code = rand(111111, 999999);
+		$recomnded_code = $_POST['recomnded_code'];
+		$ref_url = 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']).'/'.'register.php'.'/'.$referral_code;
+					
+		
+		$sql = "SELECT * FROM users WHERE email = '$email'";
+		$result = mysqli_query($conn, $sql);
+		
+		if (mysqli_num_rows($result) > 0) {
+			$emailErr = "email is already exist";
+		} else {
+				
+			if (strlen($mobile) == 10) {
+				
+				$insert_sql = "INSERT INTO users (name, email, mobile, password, ref_code, trx_point, ref_url, recomnded_code) 
+				VALUES ('$name', '$email', '$mobile', '$password', '$referral_code', '12800', '$ref_url', '$recomnded_code')";
+		        echo $insert_sql.'<br>';
+				$results = mysqli_query($conn, $insert_sql);
+				if ($results) {
+					echo "Record added successfully";
+				}else{
+					echo "Record added not successfully";
+				}
+				// Verify a referral code
+	
+			}else {
+				$mobileErr = "Invalid mobile number enter 10 digit";
+			}
+		} 
+		
+		if ($_POST['recomnded_code'] !='') {
+			$sql = "SELECT * FROM users WHERE recomnded_code = '$recomnded_code'";
+			echo $sql.'<br>';
+			$result = mysqli_query($GLOBALS['conn'], $sql);
+			if (mysqli_num_rows($result)>0) {
+				$row = mysqli_fetch_assoc($result);
+				$recomnded_code = $row['recomnded_code'];
+				echo $recomnded_code;
+				$trx_point = $row['trx_point'];
+				echo $trx_point;
+				$sql = "UPDATE `users` SET `trx_point` = '$trx_point' WHERE `recomnded_code` = '$recomnded_code'";
+				echo $sql;
+				$result = mysqli_query($GLOBALS['conn'], $sql);
+				if (!$result) {
+					return false;
+				}
+			} else {
+			   return false;
+			}
+		}
+    
+    }
+}
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +118,9 @@
     <link rel="stylesheet" href="./assets/css/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/custom.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-
+    <style>
+	  .error {color: #FF0000;}
+	</style>
     <noscript>
       <strong>
         We're sorry but wallet_h5 doesn't work properly without JavaScript
@@ -110,20 +220,23 @@
       <main class="layout-body">
         <div class="layout-main">
           <h2 class="page-title">Register an account</h2>
-          <form class="p-3">
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="p-3" method="post" autocomplete="off">
             <div class="mb-4">
               <label for="InputUsername" class="form-label">Username</label>
               <input
-                type="email"
+                type="text"
+                name="name"
                 class="form-control"
                 id="InputUsername"
                 aria-describedby="emailHelp"
                 placeholder="Username,6-16 letters or numbers"
               />
+              <span class="error"><?php echo $nameErr;?></span>
             </div>
             <div class="mb-4">
               <label for="InputPassword" class="form-label">Password</label>
-              <input type="password" class="form-control" id="InputPassword" />
+              <input type="password" name="password" class="form-control" id="InputPassword" />
+              <span class="error"><?php echo $passwordErr;?></span>
             </div>
             <div class="mb-4">
               <label class="form-label" for="InputMobileNumber"
@@ -1389,29 +1502,30 @@
 
                 <input
                   type="number"
+                  name="mobile"
                   class="form-control"
                   id="InputMobileNumber"
                 />
+                <span class="error"><?php echo $mobileErr;?></span>
               </div>
             </div>
             <div class="mb-4">
               <label class="form-label" for="InputEmail">Email</label>
-              <input type="email" class="form-control" id="InputEmail" />
+              <input type="email" name="email" class="form-control" id="InputEmail" />
+              <span class="error"><?php echo $emailErr;?></span>
             </div>
             <div class="mb-4">
               <label class="form-label" for="InputRecomendationCode"
                 >Recommendation code</label
               >
-              <input
-                type="text"
-                class="form-control"
-                id="InputRecomendationCode"
-              />
+              <input type="text" name="recomnded_code" class="form-control" id="InputRecomendationCode"/>
+              <span class="error"><?php echo $recomnded_codeErr;?></span>
             </div>
             <div class="vstack gap-3 form-button-group">
-              <button type="button" class="btn btn-primary form-btn">
+              <!-- <button type="button" class="btn btn-primary form-btn">
                 Register
-              </button>
+              </button> -->
+              <input type="submit" name="submit" class="btn btn-primary form-btn" value="Register">
             </div>
           </form>
         </div>

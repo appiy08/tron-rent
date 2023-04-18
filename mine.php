@@ -1,3 +1,6 @@
+<?php
+ include('auth_session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -115,10 +118,10 @@
               <label class="d-block">Total Balance</label><em>12800.00</em>TRX
             </div>
             <div class="btn-group user-money-btn-group" role="group" aria-label="Basic outlined example">
-              <a type="button" class="btn btn-outline-custom">
+              <a href="deposit.php" type="button" class="btn btn-outline-custom">
                 <i class="icon icon-in"></i> Deposit
               </a>
-              <a type="button" class="btn btn-outline-custom">
+              <a href="withdrawal.php" type="button" class="btn btn-outline-custom">
                 <i class="icon icon-out"></i> Withdrawal
               </a>
             </div>
@@ -129,13 +132,13 @@
             <div class="card-body">
               <h3 class="card-title">App Services</h3>
               <div class="grid-wrap pb-2">
-                <a href="javascript.void(0);" class="grid-item">
+                <a href="introduction.php" class="grid-item">
                   <i class="icon icon-help"></i>
                   <span>Information</span>
                 </a>
                 <a href="#/record/transaction" class="grid-item"><i class="icon icon-record"></i>
                   <span>Transaction record</span></a>
-                <a href="#/share" class="grid-item">
+                <a href="share.php" class="grid-item">
                   <i class="icon icon-share"></i>
                   <span>Share Friends</span></a>
                 <a href="https://trxminer.click/tronapp.html" target="_blank" class="grid-item">
@@ -143,11 +146,11 @@
                   <span>App</span></a>
                 <a href="#/basicTransfer" class="grid-item"><i class="icon icon-change"></i>
                   <span>Transfer to basic</span></a>
-                <a href="#/promotion" class="grid-item"><i class="icon icon-team"></i> <span>Team</span></a>
+                <a href="promotion.php" class="grid-item"><i class="icon icon-team"></i> <span>Team</span></a>
                 <a href="#/account_security" class="grid-item"><i class="icon icon-cipher"></i>
                   <span>Change Password</span></a>
                 <a href="#/announcement" class="grid-item"><i class="icon icon-news"></i> <span>Notification</span></a>
-                <a class="grid-item"><i class="icon icon-out"></i> <span>Logout</span></a>
+                <a href="logout.php" class="grid-item"><i class="icon icon-out"></i> <span>Logout</span></a>
               </div>
             </div>
           </div>

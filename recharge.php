@@ -52,7 +52,7 @@
                             <div class="title">bep20-USDT
                                 <div class="rate">Exchange rate 1:15.076134 TRX</div>
                             </div>
-                            <div class="btn btn-primary btn-choose">Choose</div>
+                            <a href="recharge-public.php" class="btn btn-primary btn-choose">Choose</a>
                         </li>
                         <li class="list-group-item px-0 d-flex align-items-center justify-content-between bg-transparent symbol-item">
                             <div class="icon">
@@ -61,7 +61,7 @@
                             <div class="title">trc20-USDT
                                 <div class="rate">Exchange rate 1:15.076134 TRX</div>
                             </div>
-                            <div class="btn btn-primary btn-choose">Choose</div>
+                            <a href="recharge-public.php" class="btn btn-primary btn-choose">Choose</a>
                         </li>
                         <li class="list-group-item px-0 d-flex align-items-center justify-content-between bg-transparent symbol-item">
                             <div class="icon">
@@ -70,7 +70,7 @@
                             <div class="title">erc20-USDT
                                 <div class="rate">Exchange rate 1:15.076134 TRX</div>
                             </div>
-                            <div class="btn btn-primary btn-choose">Choose</div>
+                            <a href="recharge-public.php" class="btn btn-primary btn-choose">Choose</a>
                         </li>
                         <li class="list-group-item px-0 d-flex align-items-center justify-content-between bg-transparent symbol-item">
                             <div class="icon">
@@ -79,7 +79,7 @@
                             <div class="title">BNB
                                 <div class="rate">Exchange rate 1:5213.327302 TRX</div>
                             </div>
-                            <div class="btn btn-primary btn-choose">Choose</div>
+                            <a href="recharge-public.php" class="btn btn-primary btn-choose">Choose</a>
                         </li>
                         <li class="list-group-item px-0 d-flex align-items-center justify-content-between bg-transparent symbol-item">
                             <div class="icon">
@@ -88,7 +88,7 @@
                             <div class="title">ETH
                                 <div class="rate">Exchange rate 1:31566.410372 TRX</div>
                             </div>
-                            <div class="btn btn-primary btn-choose">Choose</div>
+                            <a href="recharge-public.php" class="btn btn-primary btn-choose">Choose</a>
                         </li>
                         <li class="list-group-item px-0 d-flex align-items-center justify-content-between bg-transparent symbol-item">
                             <div class="icon">
@@ -97,7 +97,7 @@
                             <div class="title">DOGE
                                 <div class="rate">Exchange rate 1:1.346901 TRX</div>
                             </div>
-                            <div class="btn btn-primary btn-choose">Choose</div>
+                            <a href="recharge-public.php" class="btn btn-primary btn-choose">Choose</a>
                         </li>
                         <li class="list-group-item px-0 d-flex align-items-center justify-content-between bg-transparent symbol-item">
                             <div class="icon">
@@ -106,7 +106,7 @@
                             <div class="title">TRX
                                 <div class="rate">Exchange rate 1:1 TRX</div>
                             </div>
-                            <div class="btn btn-primary btn-choose">Choose</div>
+                            <a href="recharge-public.php" class="btn btn-primary btn-choose">Choose</a>
                         </li>
                     </ul>
                 </form>

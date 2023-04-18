@@ -142,7 +142,7 @@
               link. Send Link to your friends or any social platform. Tell
               them this is the best investment mining platform, withdraw at
               least 8%-29% of the investment amount every day) 2、The Official
-              platform of TRONRENT mining pool is referred to as TRON.RENT has
+              platform of TRONSUPPLY mining pool is referred to as TRON.RENT has
               been certified by the TRON blockchain financial center, and we
               are an official and legal TRON operator. To provide customers
               with the most stable, safe and efficient service! Since 2020, we
@@ -223,27 +223,27 @@
           <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="pills-flexible-invest" role="tabpanel" aria-labelledby="pills-flexible-invest-tab" tabindex="0">
               <div class="grid-wrap recharge-symbol-list symbol758">
-                <a href="#/" aria-current="page" class="grid-item">
+                <a href="invest.php" aria-current="page" class="grid-item">
                   <div class="icon icon-btc"></div>
                   <div class="title">BTC</div>
                 </a>
-                <a href="#/" aria-current="page" class="grid-item">
+                <a href="invest.php" aria-current="page" class="grid-item">
                   <div class="icon icon-eth"></div>
                   <div class="title">ETH</div>
                 </a>
-                <a href="#/" aria-current="page" class="grid-item">
+                <a href="invest.php" aria-current="page" class="grid-item">
                   <div class="icon icon-bnb"></div>
                   <div class="title">BNB</div>
                 </a>
-                <a href="#/" aria-current="page" class="grid-item">
+                <a href="invest.php" aria-current="page" class="grid-item">
                   <div class="icon icon-doge"></div>
                   <div class="title">DOGE</div>
                 </a>
-                <a href="#/" aria-current="page" class="grid-item">
+                <a href="invest.php" aria-current="page" class="grid-item">
                   <div class="icon icon-trx"></div>
                   <div class="title">TRX</div>
                 </a>
-                <a href="#/" aria-current="page" class="grid-item">
+                <a href="invest.php" aria-current="page" class="grid-item">
                   <div class="icon icon-usdt"></div>
                   <div class="title">USDT</div>
                 </a>
@@ -256,9 +256,9 @@
                     <div class="uni-image">
                       <img src="./assets/images/upload/20230224154315.jpg" />
                     </div>
-                    <div class="uni-view c-white mt10 mb10">
+                    <a href="invest-product.php" class="uni-view c-white mt10 mb10">
                       TRONLINK MINING
-                    </div>
+                    </a>
                     <div class="uni-view ft26 word">
                       Daily rate:25.00-29.00%
                     </div>
@@ -270,9 +270,9 @@
                     <div class="uni-image">
                       <img src="./assets/images/upload/20230224154213.jpg" />
                     </div>
-                    <div class="uni-view c-white mt10 mb10">
-                      Tron Rent mining
-                    </div>
+                    <a href="invest-product.php" class="uni-view c-white mt10 mb10">
+                      Tron Supply mining
+                    </a>
                     <div class="uni-view ft26 word">
                       Daily rate:4.00-5.00%
                     </div>
@@ -284,9 +284,9 @@
                     <div class="uni-image">
                       <img src="./assets/images/upload/20230224155102.png" />
                     </div>
-                    <div class="uni-view c-white mt10 mb10">
+                    <a href="invest-product.php" class="uni-view c-white mt10 mb10">
                       TRX mining 30 days
-                    </div>
+                    </a>
                     <div class="uni-view ft26 word">
                       Daily rate:12.20-13.11%
                     </div>
@@ -298,9 +298,9 @@
                     <div class="uni-image">
                       <img src="./assets/images/upload/20230224154626.jpg" />
                     </div>
-                    <div class="uni-view c-white mt10 mb10">
+                    <a href="invest-product.php" class="uni-view c-white mt10 mb10">
                       ETH DIFI 2.0 MINING
-                    </div>
+                    </a>
                     <div class="uni-view ft26 word">
                       Daily rate:17.99-18.00%
                     </div>
@@ -315,173 +315,6 @@
               View more &gt;&gt;
             </a>
           </div>
-        </div>
-        <div class="trend-list-container">
-          <div class="h3">Instant Quotes</div>
-          <ul class="nav nav-justified head-tabs">
-            <li class="nav-item">
-              <button class="nav-link active" id="binacne-tab" data-bs-toggle="tab" data-bs-target="#binacne-tab-pane" type="button" role="tab" aria-controls="binacne-tab-pane" aria-selected="true">
-                BINANCE
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link" id="okx-tab" data-bs-toggle="tab" data-bs-target="#okx-tab-pane" type="button" role="tab" aria-controls="okx-tab-pane" aria-selected="true">
-                OKX
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link" id="huobi-tab" data-bs-toggle="tab" data-bs-target="#huobi-tab-pane" type="button" role="tab" aria-controls="huobi-tab-pane" aria-selected="true">
-                HUOBI
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link" id="coinbase-tab" data-bs-toggle="tab" data-bs-target="#coinbase-tab-pane" type="button" role="tab" aria-controls="coinbase-tab-pane" aria-selected="true">
-                COINBASE
-              </button>
-            </li>
-          </ul>
-          <ul class="game-list ps-0">
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_BTC.png" />
-              </div>
-              <div class="info">
-                <span class="title">BTC / USDT</span><span class="time">1:424488.484118 TRX</span>
-              </div>
-              <div class="price mine-fall">28255.4500</div>
-              <div class="zd mine-fall">-0.12%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_BNB.png" />
-              </div>
-              <div class="info">
-                <span class="title">BNB / USDT</span><span class="time">1:4677.103718 TRX</span>
-              </div>
-              <div class="price mine-fall">310.5000</div>
-              <div class="zd mine-fall">-0.58%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_TRX.png" />
-              </div>
-              <div class="info">
-                <span class="title">TRX / USDT</span><span class="time">1:1 TRX</span>
-              </div>
-              <div class="price mine-rise">0.0663</div>
-              <div class="zd mine-rise">+1.28%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_ETH.png" />
-              </div>
-              <div class="info">
-                <span class="title">ETH / USDT</span><span class="time">1:27537.708866 TRX</span>
-              </div>
-              <div class="price mine-rise">1864.9100</div>
-              <div class="zd mine-rise">+3.16%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_DOGE.png" />
-              </div>
-              <div class="info">
-                <span class="title">DOGE / USDT</span><span class="time">1:1.501731 TRX</span>
-              </div>
-              <div class="price mine-rise">0.0999</div>
-              <div class="zd mine-rise">+27.79%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_XRP.png" />
-              </div>
-              <div class="info">
-                <span class="title">XRP / USDT</span><span class="time">1:7.474032 TRX</span>
-              </div>
-              <div class="price mine-fall">0.4978</div>
-              <div class="zd mine-fall">-3.26%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_SOL.png" />
-              </div>
-              <div class="info">
-                <span class="title">SOL / USDT</span><span class="time">1:310.85353 TRX</span>
-              </div>
-              <div class="price mine-rise">20.8600</div>
-              <div class="zd mine-rise">+2.15%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_LTC.png" />
-              </div>
-              <div class="info">
-                <span class="title">LTC / USDT</span><span class="time">1:1399.066686 TRX</span>
-              </div>
-              <div class="price mine-rise">93.5000</div>
-              <div class="zd mine-rise">+1.27%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_ADA.png" />
-              </div>
-              <div class="info">
-                <span class="title">ADA / USDT</span><span class="time">1:5.914496 TRX</span>
-              </div>
-              <div class="price mine-rise">0.3973</div>
-              <div class="zd mine-rise">+0.10%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_LINK.png" />
-              </div>
-              <div class="info">
-                <span class="title">LINK / USDT</span><span class="time">1:110.040644 TRX</span>
-              </div>
-              <div class="price mine-rise">7.3900</div>
-              <div class="zd mine-rise">+1.16%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_DOT.png" />
-              </div>
-              <div class="info">
-                <span class="title">DOT / USDT</span><span class="time">1:96.989312 TRX</span>
-              </div>
-              <div class="price mine-rise">6.4590</div>
-              <div class="zd mine-rise">+2.09%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_AVAX.png" />
-              </div>
-              <div class="info">
-                <span class="title">AVAX / USDT</span><span class="time">1:259.5213 TRX</span>
-              </div>
-              <div class="price mine-rise">17.3500</div>
-              <div class="zd mine-rise">+0.46%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_BCH.png" />
-              </div>
-              <div class="info">
-                <span class="title">BCH / USDT</span><span class="time">1:1911.786843 TRX</span>
-              </div>
-              <div class="price mine-fall">127.3000</div>
-              <div class="zd mine-fall">-0.08%</div>
-            </li>
-            <li class="game-item">
-              <div class="icon">
-                <img src="./assets/images/crypto/tether_XMR.png" />
-              </div>
-              <div class="info">
-                <span class="title">XMR / USDT</span><span class="time">1:2385.970194 TRX</span>
-              </div>
-              <div class="price mine-fall">157.4000</div>
-              <div class="zd mine-fall">-1.99%</div>
-            </li>
-          </ul>
         </div>
         <div class="rollup-wrap">
           <div class="h3">Profit withdrawal</div>
